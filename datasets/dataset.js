@@ -1,5 +1,58 @@
 var dataset = {};
 
+dataset["BESIII_DssDs02317_above4600"] = {
+    reference : "BESIII Preliminary",
+    link : "https://hnbes3.ihep.ac.cn/HyperNews/get/paper468.html",
+    observable : "sigmaB",
+    xtitle : "sqrts",
+    particle : "D<sub>s</sub><sup>*+</sup>D<sub>s0</sub><sup>*</sup>(2317)<sup>-</sup>(>4.6)",
+    collision : "e+e-",
+    collab : "BESIII",
+    data : [
+        {"x": 4.6, "y": 6.8, "stath": 5.0, "statl": 4.8, "systh": 0.0, "systl": 0.0},
+        {"x": 4.612, "y": 14.7, "stath": 13.3, "statl": 12.0, "systh": 0.0, "systl": 0.0},
+        {"x": 4.626, "y": 19.3, "stath": 5.8, "statl": 5.8, "systh": 0.0, "systl": 0.0},
+        {"x": 4.64, "y": 6.0, "stath": 5.2, "statl": 5.0, "systh": 0.0, "systl": 0.0},
+        {"x": 4.66, "y": 5.8, "stath": 5.3, "statl": 5.0, "systh": 0.0, "systl": 0.0},
+        {"x": 4.68, "y": 13.9, "stath": 3.0, "statl": 3.0, "systh": 0.0, "systl": 0.0},
+        {"x": 4.7, "y": 13.7, "stath": 5.6, "statl": 5.4, "systh": 0.0, "systl": 0.0},
+    ]
+}
+
+dataset["BESIII_DssDs12460_above4600"] = {
+    reference : "BESIII Preliminary",
+    link : "https://hnbes3.ihep.ac.cn/HyperNews/get/paper468.html",
+    observable : "sigmaB",
+    xtitle : "sqrts",
+    particle : "D<sub>s</sub><sup>*+</sup>D<sub>s1</sub>(2460)<sup>-</sup>(>4.6)",
+    collision : "e+e-",
+    collab : "BESIII",
+    data : [
+        {"x": 4.6, "y": 31.2, "stath": 5.2, "statl": 5.2, "systh": 0.0, "systl": 0.0},
+        {"x": 4.612, "y": 26.1, "stath": 12.8, "statl": 11.5, "systh": 0.0, "systl": 0.0},
+        {"x": 4.626, "y": 29.1, "stath": 6.0, "statl": 6.0, "systh": 0.0, "systl": 0.0},
+        {"x": 4.64, "y": 22.8, "stath": 5.6, "statl": 5.6, "systh": 0.0, "systl": 0.0},
+        {"x": 4.66, "y": 31.1, "stath": 6.0, "statl": 6.0, "systh": 0.0, "systl": 0.0},
+        {"x": 4.68, "y": 31.9, "stath": 3.3, "statl": 3.3, "systh": 0.0, "systl": 0.0},
+        {"x": 4.7, "y": 30.8, "stath": 6.0, "statl": 6.0, "systh": 0.0, "systl": 0.0},
+    ]
+}
+
+dataset["BESIII_DssDs12536_above4600"] = {
+    reference : "BESIII Preliminary",
+    link : "https://hnbes3.ihep.ac.cn/HyperNews/get/paper468.html",
+    observable : "sigmaB",
+    xtitle : "sqrts",
+    particle : "D<sub>s</sub><sup>*+</sup>D<sub>s1</sub>(2536)<sup>-</sup>",
+    collision : "e+e-",
+    collab : "BESIII",
+    data : [
+        {"x": 4.66, "y": 13.4, "stath": 4.4, "statl": 4.4, "systh": 0.0, "systl": 0.0},
+        {"x": 4.68, "y": 26.9, "stath": 3.1, "statl": 3.1, "systh": 0.0, "systl": 0.0},
+        {"x": 4.7, "y": 35.1, "stath": 6.0, "statl": 6.0, "systh": 0.0, "systl": 0.0},
+    ]
+}
+
 dataset["ALICE_D_RAA_pt_0-10"] = {
     reference : "ALICE Preliminary",
     link : "https://alice-figure.web.cern.ch/node/15443",

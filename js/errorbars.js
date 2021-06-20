@@ -119,6 +119,11 @@ var drawaxisgrid = function()
         xtitle.append('tspan').attr('class', 'axistitle')
             .text(' (GeV/c)');
     }
+    else if(document.getElementById('xvariable').value === "sqrts")
+    {
+        xtitle.append('tspan').attr('class', 'axistitle')
+            .text('√s (GeV)');
+    }
 
     var ytitle = svg.append("text")
         .attr("transform", "rotate(-90)")
@@ -165,6 +170,13 @@ var drawaxisgrid = function()
             .text(' / D');
         ytitle.append('tspan').attr('class', 'axistitlesup')
             .text('0');
+    }
+    else if(obs === "sigmaB")
+    {
+        ytitle.append('tspan').attr('class', 'axistitle')
+            .text('σ');
+        ytitle.append('tspan').attr('class', 'axistitlesub')
+            .text('B');
     }
 
     var tmark = svg.append("text")
@@ -410,17 +422,20 @@ function legend(da, trans = 500)
         tlegend.append('tspan')
             .style("class", "legendlabel")
             .text(' ' + thisitem.collab);
-        tlegend.append('tspan')
-            .style("class", "legendlabel")
-            .style("font-style", "italic")
-            .text(' ' + thisitem.collision + ' ' + thisitem.energy);
-        if(thisitem.centrality != "")
+        if(thisitem.observable != "sigmaB")
+        {
+            tlegend.append('tspan')
+                .style("class", "legendlabel")
+                .style("font-style", "italic")
+                .text(' ' + thisitem.collision + ' ' + thisitem.energy);
+        }
+        if(thisitem.observable != "sigmaB" && thisitem.centrality != "")
         {
             tlegend.append('tspan')
                 .style("class", "legendlabel")
                 .text(' ' + thisitem.centrality);
         }
-        if(thisitem.rapidity != "")
+        if(thisitem.observable != "sigmaB" && thisitem.rapidity != "")
         {
             tlegend.append('tspan')
                 .style("class", "legendlabel")

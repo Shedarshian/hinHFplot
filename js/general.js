@@ -33,6 +33,12 @@ function defaultrange()
                 pymin : 0,
                 pymax : 2
             },
+            "sigmaB+sqrts" : {
+                pxmin : 4.55,
+                pxmax : 4.75,
+                pymin : 0,
+                pymax : 50
+            },
         }
 
     var varkey = document.getElementById('observable').value + "+" + document.getElementById('xvariable').value;

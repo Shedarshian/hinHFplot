@@ -67,21 +67,27 @@ function loaditem()
         itcollision.innerHTML = thisitem.collision;
         iline.appendChild(itcollision);
 
-        var itenergy = document.createElement("td");
-        itenergy.innerHTML = thisitem.energy;
-        iline.appendChild(itenergy);
+        if(obs != "sigmaB")
+        {
+            var itenergy = document.createElement("td");
+            itenergy.innerHTML = thisitem.energy;
+            iline.appendChild(itenergy);
+        }
 
         var itcollab = document.createElement("td");
         itcollab.innerHTML = thisitem.collab;
         iline.appendChild(itcollab);
 
-        var itcentrality = document.createElement("td");
-        itcentrality.innerHTML = thisitem.centrality;
-        iline.appendChild(itcentrality);
+        if(obs != "sigmaB")
+        {
+            var itcentrality = document.createElement("td");
+            itcentrality.innerHTML = thisitem.centrality;
+            iline.appendChild(itcentrality);
 
-        var itrapidity = document.createElement("td");
-        itrapidity.innerHTML = thisitem.rapidity;
-        iline.appendChild(itrapidity);
+            var itrapidity = document.createElement("td");
+            itrapidity.innerHTML = thisitem.rapidity;
+            iline.appendChild(itrapidity);
+        }
 
         var itcolor = document.createElement("td");
         iline.appendChild(itcolor);
@@ -97,10 +103,13 @@ function loaditem()
         // itcheck.setAttribute('onclick', "checkthis('"+da+"')");
         itparticle.setAttribute('onclick', "checkthis('"+da+"')");
         itcollision.setAttribute('onclick', "checkthis('"+da+"')");
-        itenergy.setAttribute('onclick', "checkthis('"+da+"')");
         itcollab.setAttribute('onclick', "checkthis('"+da+"')");
-        itcentrality.setAttribute('onclick', "checkthis('"+da+"')");
-        itrapidity.setAttribute('onclick', "checkthis('"+da+"')");
+        if(obs != "sigmaB")
+        {
+            itenergy.setAttribute('onclick', "checkthis('"+da+"')");
+            itcentrality.setAttribute('onclick', "checkthis('"+da+"')");
+            itrapidity.setAttribute('onclick', "checkthis('"+da+"')");
+        }
 
         iline.setAttribute('onmouseover', "checkcolor('"+da+"')");
         iline.setAttribute('onmouseout', "checkcolorback('"+da+"')");
