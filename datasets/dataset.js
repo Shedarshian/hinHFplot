@@ -11,10 +11,10 @@ dataset["BESIII_DssDs02317_above4600"] = {
     data : [
         {"x": 4.6, "y": 6.8, "stath": 5.0, "statl": 4.8, "systh": 0.0, "systl": 0.0},
         {"x": 4.612, "y": 14.7, "stath": 13.3, "statl": 12.0, "systh": 0.0, "systl": 0.0},
-        {"x": 4.626, "y": 19.3, "stath": 5.8, "statl": 5.8, "systh": 0.0, "systl": 0.0},
+        {"x": 4.626, "y": 19.3, "stath": 5.8, "statl": 5.8, "systh": 2.0, "systl": 2.0},
         {"x": 4.64, "y": 6.0, "stath": 5.2, "statl": 5.0, "systh": 0.0, "systl": 0.0},
         {"x": 4.66, "y": 5.8, "stath": 5.3, "statl": 5.0, "systh": 0.0, "systl": 0.0},
-        {"x": 4.68, "y": 13.9, "stath": 3.0, "statl": 3.0, "systh": 0.0, "systl": 0.0},
+        {"x": 4.68, "y": 13.9, "stath": 3.0, "statl": 3.0, "systh": 1.4, "systl": 1.4},
         {"x": 4.7, "y": 13.7, "stath": 5.6, "statl": 5.4, "systh": 0.0, "systl": 0.0},
     ]
 }
@@ -28,13 +28,13 @@ dataset["BESIII_DssDs12460_above4600"] = {
     collision : "e+e-",
     collab : "BESIII",
     data : [
-        {"x": 4.6, "y": 31.2, "stath": 5.2, "statl": 5.2, "systh": 0.0, "systl": 0.0},
+        {"x": 4.6, "y": 31.2, "stath": 5.2, "statl": 5.2, "systh": 3.7, "systl": 3.7},
         {"x": 4.612, "y": 26.1, "stath": 12.8, "statl": 11.5, "systh": 0.0, "systl": 0.0},
-        {"x": 4.626, "y": 29.1, "stath": 6.0, "statl": 6.0, "systh": 0.0, "systl": 0.0},
-        {"x": 4.64, "y": 22.8, "stath": 5.6, "statl": 5.6, "systh": 0.0, "systl": 0.0},
-        {"x": 4.66, "y": 31.1, "stath": 6.0, "statl": 6.0, "systh": 0.0, "systl": 0.0},
-        {"x": 4.68, "y": 31.9, "stath": 3.3, "statl": 3.3, "systh": 0.0, "systl": 0.0},
-        {"x": 4.7, "y": 30.8, "stath": 6.0, "statl": 6.0, "systh": 0.0, "systl": 0.0},
+        {"x": 4.626, "y": 29.1, "stath": 6.0, "statl": 6.0, "systh": 2.6, "systl": 2.6},
+        {"x": 4.64, "y": 22.8, "stath": 5.6, "statl": 5.6, "systh": 2.3, "systl": 2.3},
+        {"x": 4.66, "y": 31.1, "stath": 6.0, "statl": 6.0, "systh": 2.7, "systl": 2.7},
+        {"x": 4.68, "y": 31.9, "stath": 3.3, "statl": 3.3, "systh": 2.5, "systl": 2.5},
+        {"x": 4.7, "y": 30.8, "stath": 6.0, "statl": 6.0, "systh": 2.6, "systl": 2.6},
     ]
 }
 
@@ -47,9 +47,9 @@ dataset["BESIII_DssDs12536_above4600"] = {
     collision : "e+e-",
     collab : "BESIII",
     data : [
-        {"x": 4.66, "y": 13.4, "stath": 4.4, "statl": 4.4, "systh": 0.0, "systl": 0.0},
-        {"x": 4.68, "y": 26.9, "stath": 3.1, "statl": 3.1, "systh": 0.0, "systl": 0.0},
-        {"x": 4.7, "y": 35.1, "stath": 6.0, "statl": 6.0, "systh": 0.0, "systl": 0.0},
+        {"x": 4.66, "y": 13.4, "stath": 4.4, "statl": 4.4, "systh": 1.7, "systl": 1.7},
+        {"x": 4.68, "y": 26.9, "stath": 3.1, "statl": 3.1, "systh": 2.3, "systl": 2.3},
+        {"x": 4.7, "y": 35.1, "stath": 6.0, "statl": 6.0, "systh": 3.0, "systl": 3.0},
     ]
 }
 
