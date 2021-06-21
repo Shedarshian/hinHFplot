@@ -20,9 +20,13 @@ function loaditem()
     {
         var thisitem = dataset[da];
 
-        var ifdrawx = thisitem.xtitle == xvar;
+        var ifdrawx = thisitem.xtitle == xvar ||
+            (xvar == "y" && (thisitem.xtitle == "absy" || thisitem.xtitle == "ycm" || thisitem.xtitle == "absycm")) ||
+            (xvar == "absy" && (thisitem.xtitle == "absycm")) ||
+            false;            
         var ifdrawy = thisitem.observable == obs ||
-	    (obs == "vn" && (thisitem.observable == "v2" || thisitem.observable == "v3"));
+	    (obs == "vn" && (thisitem.observable == "v2" || thisitem.observable == "v3")) ||
+            false;
 
         if(!ifdrawx || !ifdrawy) { continue; }
 
@@ -86,6 +90,14 @@ function loaditem()
 
             var itrapidity = document.createElement("td");
             itrapidity.innerHTML = thisitem.rapidity;
+            iline.appendChild(itrapidity);
+
+            var itcentrality = document.createElement("td");
+            itcentrality.innerHTML = thisitem.kinea;
+            iline.appendChild(itcentrality);
+    
+            var itrapidity = document.createElement("td");
+            itrapidity.innerHTML = thisitem.kineb;
             iline.appendChild(itrapidity);
         }
 
