@@ -39,7 +39,7 @@ var setscale = function()
         .range([chartHeight, 0])
         .domain([ymin, ymax]);
 
-    x0 = margin.left + chartWidth/6.;
+    x0 = margin.left + chartWidth/15.;
     y0 = margin.top + chartHeight/9.;
     if(ynow < 0)
         ynow = y0;
@@ -57,7 +57,7 @@ var setsvg = function()
 // axes
 var drawaxisgrid = function()
 {
-    var ticksx = 10, ticksy = 5;
+    var ticksx = 8, ticksy = 5;
     var ticksize = -5;
     var xGrid = d3.select("svg").select("g").append('g')
         .attr('transform', 'translate(0,' + chartHeight + ')')
@@ -70,7 +70,7 @@ var drawaxisgrid = function()
 
     var obs = document.getElementById('observable').value;
     var vy = 0;
-    if(obs == "RAA") vy = 1;
+    if(obs == "RAA" || obs == "RpA") vy = 1;
     else if(obs == "LcD0") vy = -10;
 
     if(vy > ymin && vy < ymax)
@@ -108,8 +108,9 @@ var drawaxisgrid = function()
     var xtitle = svg.append("text")             
         .attr("transform",
               "translate(" + (chartWidth/2. + margin.left) + " ," + 
-              (chartHeight + margin.top + margin.bottom/1.15) + ")")
+              (chartHeight + margin.top + margin.bottom/1.3) + ")")
         .style("text-anchor", "middle")
+
     if(document.getElementById('xvariable').value === "pT")
     {
         xtitle.append('tspan').attr('class', 'axistitle')
@@ -118,6 +119,34 @@ var drawaxisgrid = function()
             .text('T');
         xtitle.append('tspan').attr('class', 'axistitle')
             .text(' (GeV/c)');
+    }
+    else if(document.getElementById('xvariable').value === "y")
+    {
+        xtitle.append('tspan').attr('class', 'axistitle')
+            .text('y');
+        xtitle.append('tspan').attr('class', 'axistitlesub')
+            .text('CM');
+    }
+    else if(document.getElementById('xvariable').value === "absy")
+    {
+        xtitle.append('tspan').attr('class', 'axistitle')
+            .text('|y');
+        xtitle.append('tspan').attr('class', 'axistitlesub')
+            .text('CM');
+        xtitle.append('tspan').attr('class', 'axistitle')
+            .text('|');
+    }
+    else if(document.getElementById('xvariable').value === "cent")
+    {
+        xtitle.append('tspan').attr('class', 'axistitle')
+            .text('Centrality');
+    }
+    else if(document.getElementById('xvariable').value === "Npart")
+    {
+        xtitle.append('tspan').attr('class', 'axistitle')
+            .text('N');
+        xtitle.append('tspan').attr('class', 'axistitlesub')
+            .text('part');
     }
     else if(document.getElementById('xvariable').value === "sqrts")
     {
@@ -429,17 +458,17 @@ function legend(da, trans = 500)
                 .style("font-style", "italic")
                 .text(' ' + thisitem.collision + ' ' + thisitem.energy);
         }
-        if(thisitem.observable != "sigmaB" && thisitem.centrality != "")
+        if(thisitem.observable != "sigmaB" && thisitem.kinea != "")
         {
             tlegend.append('tspan')
                 .style("class", "legendlabel")
-                .text(' ' + thisitem.centrality);
+                .text(', ' + decodehtml(thisitem.kinea));
         }
-        if(thisitem.observable != "sigmaB" && thisitem.rapidity != "")
+        if(thisitem.observable != "sigmaB" && thisitem.kineb != "")
         {
             tlegend.append('tspan')
                 .style("class", "legendlabel")
-                .text(', ' + decodehtml(thisitem.rapidity));
+                .text(' ' + decodehtml(thisitem.kineb));
         }
 
         tlegend.transition().attr('opacity', document.getElementById('btnlegend').value).duration(trans);
