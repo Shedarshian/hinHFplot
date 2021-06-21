@@ -85,17 +85,9 @@ function loaditem()
         if(obs != "sigmaB")
         {
             var itcentrality = document.createElement("td");
-            itcentrality.innerHTML = thisitem.centrality;
-            iline.appendChild(itcentrality);
-
-            var itrapidity = document.createElement("td");
-            itrapidity.innerHTML = thisitem.rapidity;
-            iline.appendChild(itrapidity);
-
-            var itcentrality = document.createElement("td");
             itcentrality.innerHTML = thisitem.kinea;
             iline.appendChild(itcentrality);
-    
+
             var itrapidity = document.createElement("td");
             itrapidity.innerHTML = thisitem.kineb;
             iline.appendChild(itrapidity);
